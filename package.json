@@ -1,0 +1,50 @@
+{
+  "name": "react-cal",
+  "version": "0.1.0",
+  "description": "A react calendar component inspired by FantastiCal",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliverox/react-cal.git"
+  },
+  "keywords": [
+    "react",
+    "calendar",
+    "react-cal"
+  ],
+  "author": "Oliver Oxenham",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/oliverox/react-cal/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/oliverox/react-cal/issues"
+  },
+  "homepage": "https://github.com/oliverox/react-cal",
+  "dependencies": {
+    "moment": "2.10.2",
+    "react": "0.13.2",
+    "react-tools": "0.13.2",
+    "underscore": "^1.8.3"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.1",
+    "jest-cli": "^0.4.0",
+    "webpack": "^1.8.9"
+  }
+}

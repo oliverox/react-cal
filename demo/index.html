@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Calendar Demo</title>
+
+    <!-- Used to style this page (not required)-->
+    <link rel="stylesheet" type="text/css" href="http://getskeleton.com/dist/css/skeleton.css"/>
+
+    <style type="text/css">
+      body {
+        font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+    </style>
+
+    <!-- Be sure to include the stylesheet react-cal.css -->
+    <link rel="stylesheet" type="text/css" href="../dist/react-cal.css"/>
+
+    <!-- React is a dependency of react-cal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.js"></script>
+
+    <!-- Underscore is a dependency of react-cal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+
+    <!-- Moment is a dependency of react-cal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.js"></script>
+
+    <script> __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.React </script>
+
+
+    <!-- react-cal -->
+    <script src="../dist/react-cal.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="column" style="margin-top: 100px;">
+          <h4>React-cal</h4>
+          <div id="demo" class="calendar-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        React.render(React.createElement(Reactcal.Calendar, {view: "month"}), document.getElementById('demo'));
+    </script>
+  </body>
+</html>
