@@ -2,7 +2,7 @@
   "name": "react-cal",
   "version": "0.1.0",
   "description": "A react calendar component inspired by FantastiCal",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
