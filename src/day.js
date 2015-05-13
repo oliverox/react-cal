@@ -14,6 +14,8 @@ var React = require('react/addons');
  */
 var Day = React.createClass({
 
+  displayName: "Day",
+
   mixins: [React.addons.PureRenderMixin],
 
   render: function() {

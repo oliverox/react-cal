@@ -11,6 +11,8 @@ var React = require('react/addons');
  */
 var Header = React.createClass({
 
+  displayName: "Header",
+
   mixins: [React.addons.PureRenderMixin],
 
   getDefaultProps: function() {
