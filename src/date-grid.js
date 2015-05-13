@@ -14,6 +14,8 @@ var Day = require('./day');
  */
 var DateGrid = React.createClass({
 
+  displayName: "DateGrid",
+
   mixins: [React.addons.PureRenderMixin],
 
   render: function() {

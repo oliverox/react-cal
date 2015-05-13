@@ -16,6 +16,8 @@ var DateGrid = require('./date-grid');
  */
 var Calendar = React.createClass({
 
+  displayName: "Calendar",
+
   mixins: [React.addons.PureRenderMixin],
 
   getDefaultProps: function() {
