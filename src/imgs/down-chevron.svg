@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 11 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M7.9859,2.199 L2.4784,7.462 L0.8585,5.914 L6.3661,0.651 L7.9859,2.199 L7.9859,2.199 Z"></path>
+        <path id="path-3" d="M5.5327,7.462 L0.0252,2.199 L1.6451,0.651 L7.1526,5.914 L5.5327,7.462 L5.5327,7.462 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Slice-1-+-Group-278-+-Group-281" sketch:type="MSLayerGroup">
+            <g id="Group-278" transform="translate(3.000000, 0.000000)">
+                <mask id="mask-2" sketch:name="Clip 277" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-277"></g>
+                <path d="M6.40030622,0.516423143 L8.09086895,2.16290406 L2.51409912,7.41241447 L1.20859098,5.34817693 L6.40030622,0.516423143 Z" id="Fill-276" fill="#1577B9" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+            <g id="Group-281">
+                <mask id="mask-4" sketch:name="Clip 280" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-280"></g>
+                <path d="M0.0241694804,1.94057796 L2.17160228,-0.0407090416 L9.16073087,-0.0407090416 L11.1796317,1.94057796 L5.45680455,7.45727728 L0.0241694804,1.94057796 Z" id="Fill-279" fill="#1577B9" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

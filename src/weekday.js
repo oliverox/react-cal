@@ -13,7 +13,7 @@ var React = require('react/addons');
  */
 var Weekday = React.createClass({
 
-  displayName: "Weekday",
+  displayName: 'Weekday',
 
   mixins: [React.addons.PureRenderMixin],
 

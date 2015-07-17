@@ -14,12 +14,16 @@ var React = require('react/addons');
  */
 var Day = React.createClass({
 
-  displayName: "Day",
+  displayName: 'Day',
 
   mixins: [React.addons.PureRenderMixin],
 
+  onDateClick: function() {
+    this.props.onDateClick(this.props.value);
+  },
+
   render: function() {
-    var dateClassName = 'date';
+    var dateClassName = 'date pointer';
     if (this.props.type === 0) {
       dateClassName += ' faded';
     }
@@ -27,7 +31,7 @@ var Day = React.createClass({
       dateClassName += ' today';
     }
     return React.createElement('div', {className: 'day date-container'}, [
-      React.createElement('div', {key: 1, className: dateClassName }, this.props.value)
+      React.createElement('div', {key: 1, className: dateClassName, onClick: this.onDateClick }, this.props.value.date())
     ]);
   }
 });

@@ -3,12 +3,12 @@
   <head>
     <title>React Calendar Demo</title>
 
-    <!-- Used to style this page (not required)-->
-    <link rel="stylesheet" type="text/css" href="http://getskeleton.com/dist/css/skeleton.css"/>
-
     <style type="text/css">
       body {
         font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .row {
+        max-width: 500px;
       }
     </style>
 
@@ -34,15 +34,17 @@
 
     <div class="container">
       <div class="row">
-        <div class="column" style="margin-top: 100px;">
           <h4>React-cal</h4>
           <div id="demo" class="calendar-container"></div>
-        </div>
       </div>
     </div>
 
     <script>
-        React.render(React.createElement(Reactcal.Calendar, {view: "month"}), document.getElementById('demo'));
+        React.render(React.createElement(Reactcal.Calendar, {
+          // today: moment("1995-12-25"),
+          view: "month",
+          type: "datepicker" // 'datepick', 'calendar'
+        }), document.getElementById("demo"));
     </script>
   </body>
 </html>

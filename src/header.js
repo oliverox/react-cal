@@ -11,29 +11,37 @@ var React = require('react/addons');
  */
 var Header = React.createClass({
 
-  displayName: "Header",
+  displayName: 'Header',
 
   mixins: [React.addons.PureRenderMixin],
 
   getDefaultProps: function() {
     return {
-      showNavigation: false
-    }
+      showNavigation: true
+    };
   },
 
   render: function() {
-    var leftChevron = React.createElement('div', {className: 'icon left-chevron'});
-    var rightChevron = React.createElement('div', {className: 'icon right-chevron'});
+    var month = this.props.currentMoment.format('MMMM');
+    var year = this.props.currentMoment.format('YYYY');
+    var leftChevron = React.createElement('div', {className: 'icon left-chevron-icon'});
+    var rightChevron = React.createElement('div', {className: 'icon right-chevron-icon'});
     var elements = [];
     if (this.props.showNavigation) {
       elements = [
-        React.createElement('div', {key: 1, className: 'control', onClick: this.props.goToPreviousMonth}, leftChevron),
-        React.createElement('div', {key: 2, className: 'main'}, this.props.month + ' ' + this.props.year),
-        React.createElement('div', {key: 3, className: 'control', onClick: this.props.goToNextMonth}, rightChevron)
+        React.createElement('div', {key: 'leftchevron-icon', className: 'control', onClick: this.props.goToPreviousMonth}, leftChevron),
+        React.createElement('div', {key: 'monthyear', className: 'description'}, [
+          React.createElement('span', {key: 'month', className: 'month'}, month + ' '),
+          React.createElement('span', {key: 'year', className: 'year'}, year)
+        ]),
+        React.createElement('div', {key: 'rightchevron-icon', className: 'control', onClick: this.props.goToNextMonth}, rightChevron)
       ];
     }
     else {
-      elements = React.createElement('div', {key: 1, className: 'main'}, this.props.month + ' ' + this.props.year);
+      elements = React.createElement('div', {key: 'monthyear', className: 'description'}, [
+        React.createElement('span', {key: 'month', className: 'month'}, month + ' '),
+        React.createElement('span', {key: 'year', className: 'year'}, year)
+      ]);
     }
     return React.createElement('div', {className: 'header'}, elements);
   }

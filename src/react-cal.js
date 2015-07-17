@@ -5,9 +5,8 @@ var React = require('react/addons');
 var moment = require('moment');
 
 // Custom components
-var Header = require('./header');
-var Weekday = require('./weekday');
-var DateGrid = require('./date-grid');
+var Datepicker = require('./datepicker');
+var Dategrid = require('./dategrid');
 
 /**
  * The Calendar
@@ -16,59 +15,89 @@ var DateGrid = require('./date-grid');
  */
 var Calendar = React.createClass({
 
-  displayName: "Calendar",
+  displayName: 'Calendar',
 
   mixins: [React.addons.PureRenderMixin],
 
   getDefaultProps: function() {
     return {
       view: 'month',
+      type: 'calendar',
       today: moment()
     };
   },
 
-  getStateFromMoment: function(currentMoment) {
+  getStateFromMoment: function(newMoment) {
     return {
-      currentMoment: currentMoment,
-      year: currentMoment.format("YYYY"),
-      month: currentMoment.format("MMMM")
+      currentMoment: newMoment
     };
   },
 
   getInitialState: function() {
-    return this.getStateFromMoment(this.props.today.clone());
+    return {
+      showDategrid: (this.props.type === 'datepicker') ? false : true,
+      currentMoment: this.props.today.clone(),
+      label: 'Select date'
+    };
   },
 
   goToPreviousMonth: function() {
-    this.setState(this.getStateFromMoment(moment(this.state.currentMoment).subtract({months: 1})));
+    this.setState({
+      currentMoment: moment(this.state.currentMoment).subtract({months: 1})
+    });
   },
 
   goToNextMonth: function() {
-    this.setState(this.getStateFromMoment(moment(this.state.currentMoment).add({months: 1})));
+    this.setState({
+      currentMoment: moment(this.state.currentMoment).add({months: 1})
+    });
+  },
+
+  toggleCalendar: function() {
+    this.setState({
+      showDategrid: !this.state.showDategrid
+    });
+  },
+
+  onDateClick: function(newMoment) {
+    console.log('new moment=', newMoment);
+    this.setState({
+      label: moment(newMoment).format('ddd, MMM D')
+    });
   },
 
   render: function() {
-    var calendarOutput;
-
-    // year view
-
-    // week view
+    var calendarOutput,
+        datePicker = React.createElement(Datepicker, {
+          key: 'datepicker',
+          showDategrid: this.state.showDategrid,
+          toggleCalendar: this.toggleCalendar,
+          label: this.state.label
+        }),
+        dateGrid = React.createElement(Dategrid, {
+          key: 'dategrid',
+          today: this.props.today,
+          showNavigation: true,
+          showDategrid: this.state.showDategrid,
+          currentMoment: this.state.currentMoment,
+          goToPreviousMonth: this.goToPreviousMonth,
+          goToNextMonth: this.goToNextMonth,
+          onDateClick: this.onDateClick
+        });
 
     // month view
     if (this.props.view === 'month') {
-      calendarOutput = React.createElement('div', {className: 'reactcal-container'}, [
-        React.createElement(Header, {
-          key: 1,
-          view: this.props.view,
-          month: this.state.month,
-          year: this.state.year,
-          showNavigation: true,
-          goToPreviousMonth: this.goToPreviousMonth,
-          goToNextMonth: this.goToNextMonth
-        }),
-        React.createElement(Weekday, {key: 2, days: moment.weekdaysShort()}),
-        React.createElement(DateGrid, {key: 3, today: this.props.today, currentMoment: this.state.currentMoment})
-      ]);
+      var subElements = [];
+
+      // create datepicker element
+      if (this.props.type === 'datepicker') {
+        subElements.push(datePicker, dateGrid);
+      }
+      else if (this.props.type === 'calendar') {
+        subElements.push(dateGrid);
+      }
+
+      calendarOutput = React.createElement('div', {className: 'reactcal-container'}, subElements);
     }
     return calendarOutput;
   }

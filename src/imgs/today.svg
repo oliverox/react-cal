@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Oval-1-+-TODAY" sketch:type="MSLayerGroup">
+            <circle id="Oval-1" fill="#D8D8D8" sketch:type="MSShapeGroup" cx="20.1933594" cy="20.1933594" r="20.1933594"></circle>
+            <text id="TODAY" sketch:type="MSTextLayer" font-family="Helvetica Neue" font-size="8" font-weight="normal" fill="#525252">
+                <tspan x="6.69335938" y="23.3635843">TODAY</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
