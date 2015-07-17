@@ -26,7 +26,6 @@ var Datepicker = React.createClass({
       React.createElement('span', {key: 'calendar-icon', className: 'icon calendar-icon'}),
       React.createElement('a', {href:'#', key: 'label', className: 'label', onClick: this.props.toggleCalendar}, this.props.label),
       React.createElement('span', {key: 'downchevron-icon', className: 'icon down-chevron-icon pointer', onClick: this.props.toggleCalendar})
-      // React.createElement('span', {key: 'today-button', className: 'button today'}, React.createElement('img', {src: '../src/imgs/today.svg'}))
     ]);
   }
 });

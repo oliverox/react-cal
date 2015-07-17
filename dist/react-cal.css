@@ -120,13 +120,13 @@
   border-radius: 2px;
 }
 .reactcal-container .dategrid .dates-row .today {
-  /*color: #fff;*/
+  color: #fff;
   width: 30px;
   height: 30px;
   line-height: 30px;
   text-align: center;
-  /*background-color: #DA4E00;*/
-  /*border-radius: 2px;*/
+  background-color: #DA4E00;
+  border-radius: 2px;
 }
 .reactcal-container .hidden {
   display: none;
